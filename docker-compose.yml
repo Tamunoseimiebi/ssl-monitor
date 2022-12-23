@@ -14,7 +14,7 @@ services:
     security_opt:
       - seccomp:./chrome.json
     ports:
-      - "127.0.0.1:8080:80"
+      - "127.0.0.1:8086:80"
     volumes:
       - app:/var/www/storage
     environment:
@@ -26,8 +26,8 @@ services:
       - MAIL_FROM_ADDRESS=no-reply@ixolit.com
       - APP_DEBUG=false
       - APP_KEY=base64:MrL+FkntVikKuJYzMAavYrC/FXA3aT6tNGpkwRw8Ef8=
-      - APP_URL=http://localhost:8080
-      - PROXY_URL=http://localhost:8080
+      - APP_URL=http://localhost:8086
+      - PROXY_URL=http://localhost:8086
       - DB_PASSWORD=db_password1234
       - DB_HOST=odin-db
       - DB_USERNAME=odin
